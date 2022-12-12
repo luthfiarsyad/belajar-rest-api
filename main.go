@@ -28,7 +28,8 @@ func main() {
 
 	echo := echo.New()
 	echo.Use(exception.PanicMiddlewares, middleware.AuthMiddleware)
-	// API Categories
+
+	// API Grouping Echo
 	api := echo.Group("/api")
 
 	// Categories
@@ -46,5 +47,6 @@ func main() {
 	api.GET("/products/:id", productHandler.FindById)
 	api.GET("/category/:category_id/products", productHandler.FindByCategoryId)
 
+	// Echo run server on port :3000
 	echo.Start(":3000")
 }

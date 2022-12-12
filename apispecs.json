@@ -215,7 +215,7 @@
                 ],
                 "responses": {
                     "200":{
-                        "description": "get all category by id",
+                        "description": "get category by id",
                         "content": {
                             "application/json":{
                                 "schema":{
@@ -228,10 +228,7 @@
                                             "type":"string"
                                         },
                                         "data":{
-                                            "type":"array",
-                                            "items": {
-                                                "$ref":"#/components/schemas/CategoryResponse"
-                                            }
+                                            "$ref":"#/components/schemas/CategoryResponse"
                                         }
                                     }
                                 }
@@ -248,7 +245,7 @@
                 }],
                 "responses": {
                     "200":{
-                        "description": "success get all categories",
+                        "description": "success get all products",
                         "content": {
                             "application/json":{
                                 "schema":{
@@ -402,7 +399,7 @@
                 "security": [{
                     "Auth":[]
                 }],
-                "description": "Get product by id",
+                "description": "Get product by id products",
                 "parameters": [
                     {
                         "required": true,
@@ -413,7 +410,7 @@
                 ],
                 "responses": {
                     "200":{
-                        "description": "get all product by id",
+                        "description": "get product by id",
                         "content": {
                             "application/json":{
                                 "schema":{
@@ -426,10 +423,7 @@
                                             "type":"string"
                                         },
                                         "data":{
-                                            "type":"array",
-                                            "items": {
-                                                "$ref":"#/components/schemas/ProductResponse"
-                                            }
+                                            "$ref":"#/components/schemas/ProductResponse"
                                         }
                                     }
                                 }
@@ -455,7 +449,12 @@
                 ],
                 "responses": {
                     "200":{
-                        "description": "get all category by id",
+                        "links": {
+                            "ini link":{
+                                "server": {"url": "www.google.com"}
+                            }
+                        },
+                        "description": "success get all products by category_id",
                         "content": {
                             "application/json":{
                                 "schema":{
