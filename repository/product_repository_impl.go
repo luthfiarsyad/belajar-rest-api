@@ -77,6 +77,7 @@ func (repo *productRepository) FindByCategoryId(ctx context.Context, tx *sql.Tx,
 	for rows.Next() {
 		product := domain.Product{}
 		rows.Scan(product.GetId(), product.GetName())
+		product.SetCategoryId(&id)
 		products = append(products, product)
 	}
 

@@ -44,7 +44,7 @@ func main() {
 	api.PUT("/products", productHandler.Update)
 	api.DELETE("/products", productHandler.Delete)
 	api.GET("/products/:id", productHandler.FindById)
-	api.GET("/products/category/:id", productHandler.FindByCategoryId)
+	api.GET("/category/:category_id/products", productHandler.FindByCategoryId)
 
 	echo.Start(":3000")
 }

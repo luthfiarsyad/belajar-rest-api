@@ -83,7 +83,7 @@ func (handler *productHandler) FindById(c echo.Context) error {
 }
 
 func (handler *productHandler) FindByCategoryId(c echo.Context) error {
-	i := c.Param("id")
+	i := c.Param("category_id")
 	id, err := strconv.Atoi(i)
 	helper.PanicIfError(err)
 

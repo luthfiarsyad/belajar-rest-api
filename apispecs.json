@@ -439,7 +439,7 @@
                 }
             }
         },
-        "/products/category/{categoryId}":{
+        "/category/{categoryId}/products":{
             "get":{
                 "security": [{
                     "Auth":[]
